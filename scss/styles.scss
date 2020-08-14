@@ -1,0 +1,365 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+@mixin media-query($screen-width) {
+  @media only screen and (max-width: $screen-width) {
+    @content;
+  }
+}
+.container {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+.intro {
+  min-height: 750px;
+  background-image: url("../img/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.site-logo {
+  font-size: 36px;
+  color: white;
+  font-family: "Yeseva One", cursive;
+  line-height: normal;
+  margin-right: 230px;
+}
+.site-nav {
+  margin-right: 20px;
+  transition: 0.6s;
+}
+.site-nav__ul {
+  @extend .flex-container;
+}
+.site-nav__link {
+  display: block;
+  padding: 47px 10px 50px;
+  font-size: 21px;
+  font-family: 'Gentium Book Basic', serif;
+  line-height: normal;
+  color: white;
+  border-top: 3px solid transparent;
+  transition: 0.5s;
+  &:hover {
+    border-top-color: white;
+  }
+}
+.site-nav__li:not(:last-child) {
+  margin-right: 30px;
+}
+.social {
+  @extend .flex-container;
+}
+.social__link {
+  font-size: 21px;
+  line-height: normal;
+  color: #dab33e;
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+#check {
+  display: none;
+}
+.fas.fa-bars {
+  font-size: 21px;
+  line-height: normal;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+@include media-query(1206px) {
+  .site-logo {
+    margin-right: 100px;
+  }
+  .social {
+    margin-left: auto;
+  }
+}
+
+
+
+@include media-query(1074px) {
+  .fas.fa-bars {
+    display: block;
+  }
+  .flex-container {
+    justify-content: space-between!important;
+  }
+  .site-nav {
+    width: 50%;
+    margin: 0;
+    left: -100%;
+    height: 100vh;
+    position: fixed;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0.800);
+  }
+  .site-logo {
+    padding: 30px 0;
+    margin: 0;
+  }
+  .site-nav__link {
+    display: block;
+    text-align: center;
+    padding: 30px 15px;
+    border-top: none;
+    margin: 0;
+    &:hover{
+      background-color: rgba(222, 178, 0, 0.600);
+    }
+
+  }
+  .site-nav__ul {
+    flex-direction: column;
+  }
+
+  .site-nav__li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  //.site-nav__li:not(:last-child) {
+  //  margin-right: 30px;
+  //}
+  .site-nav__li {
+    width: 100%;
+  }
+  .social {
+    margin: 0;
+  }
+  #check:checked ~ .site-nav {
+    left: 0;
+  }
+}
+@include media-query(900px) {
+  .social__link {
+    color: white;
+  }
+}
+
+.box {
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.702);
+  //opacity: 0.8;
+  width: 226px;
+  height: 55px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 53px;
+}
+
+.box2 {
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  background-color: rgba(255, 255, 255, 0.278);
+  //opacity: 0.702;
+  top: 551px;
+  width: 226px;
+  height: 55px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 53px;
+
+}
+
+
+.content_title{
+  font-family: 'Yeseva One', cursive;
+  font-size: 90px;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  margin: 115px 0 0 0;
+  padding: 0 100px;
+}
+
+.flex-content_title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.decoration{
+  margin: 35px 0;
+}
+.buttons{
+  width: 490px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main{
+    min-height: 710px;
+    background-image: url("../img/bg-main.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.cook_text{
+  width: 450px;
+  text-align: center;
+}
+
+.just{
+  font-family: 'Yeseva One', cursive;
+  color: #cc9900;
+  font-size: 36px;
+  line-height: 24px;
+  padding-bottom: 15px;
+}
+
+.info_text{
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4c4c4c;
+  padding: 15px;
+}
+
+.cook{
+  margin-top: 40px;
+  margin-right: -70px;
+}
+
+@include media-query(1188px) {
+  .content_title{
+    font-size: 70px;
+    padding: 0 70px;
+  }
+}
+
+@include media-query(993px) {
+  .content_title{
+    font-size: 70px;
+    padding: 0 70px;
+  }
+
+  .main_content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 70px;
+  }
+}
+
+@include media-query(705px) {
+  .content_title{
+    font-size: 70px;
+    padding: 0 20px;
+  }
+}
+
+@include media-query(605px) {
+  .content_title{
+    margin: 70px 0 0 0;
+    font-size: 60px;
+    padding: 0 10px;
+  }
+  .buttons{
+    width: 300px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+@include media-query(550px) {
+  .content_title{
+    margin: 70px 0 0 0;
+    font-size: 60px;
+    padding: 0 10px;
+  }
+  .cook_text{
+    width: 420px;
+    text-align: center;
+  }
+
+  .just{
+    font-family: 'Yeseva One', cursive;
+    color: #cc9900;
+    font-size: 32px;
+    line-height: 20px;
+    padding-bottom: 15px;
+  }
+
+  .info_text{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #4c4c4c;
+    padding: 15px;
+  }
+
+  .dish{
+    width: 421px;
+    height: 425px;
+  }
+}
+
+@include media-query(360px) {
+  .site-logo {
+    margin-right: 0;
+  }
+  .content_title{
+    margin: 80px 0 0 0;
+    font-size: 50px;
+    padding: 0 10px;
+  }
+
+  .cook_text{
+    width: 320px;
+    text-align: center;
+  }
+
+  .just{
+    font-family: 'Yeseva One', cursive;
+    color: #cc9900;
+    font-size: 28px;
+    line-height: 18px;
+    padding-bottom: 15px;
+  }
+
+  .info_text{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4c4c4c;
+    padding: 15px;
+  }
+
+  .dish{
+    width: 321px;
+    height: 325px;
+  }
+
+}
