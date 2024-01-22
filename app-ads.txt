@@ -371,3 +371,5 @@ empower.net, 63cb0332e4b01718f069d4cb, DIRECT
 google.com, pub-7983651257838282, RESELLER, f08c47fec0942fa0
 opera.com,pub9443931419968,DIRECT,55a0c5fd61378de3
 improvedigital.com, 2320, RESELLER
+google.com, pub-8603236608111854, DIRECT, f08c47fec0942fa0
+tappx.com, w5630e7ac, DIRECT, 9f375a07da0318ec
